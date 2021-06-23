@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*resetuje wszystke elementy jako "block"*/
+a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,canvas,caption,cite,code,command,datalist,dd,del,details,dfn,dl,div,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,keygen,label,legend,li,meter,nav,object,ol,output,p,pre,progress,q,s,samp,section,small,span,source,strike,strong,sub,sup,table,tbody,tfoot,thead,th,tr,tdvideo,tt,u,ul,var{background:transparent;border:0 none;font-size:100%;margin:0;padding:0;border:0;outline:0;vertical-align:top;}ol, ul {list-style:none;}blockquote, q {quotes:none;}table, table td {padding:0;border:none;border-collapse:collapse;}img {vertical-align:top;}embed {vertical-align:top;}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+
+iframe {border:0; margin:0; padding:0;} /*trzyma pozycji elementów przy zmianie rozmiaru okna*/
+img{max-width:100%;	height: auto;width: auto\9;}
+
+/*limituje rozmiary elementów*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a{color: #4C4C4C;text-decoration: none;}
+a:hover {opacity: 0.9; text-decoration: none;}
+/*formatuje rozmiary tekstu i linii dla nagłówków*/
+h1, h2 	{font-size: 25px;line-height: 30px;}
+h3, h4	{font-size: 20px;line-height: 20px;}
+h5, h6	{font-size: 16px;line-height: 16px;}
+h1, h2, h3, h4, h5, h6{line-height: 1.2}/*fformaty odstępy między wierszami*/
+
+/*wystawia kraj dla akapitu*/
+p{margin: 10px 0;}
+ /*wystawia stronu tekst*/
+.t-center{text-align: center;}
+.t-left{text-align: left;}
+.t-right{text-align: right;}
+/*wystawia stronu dla float-a*/
+.f-right{float: right;}
+.f-left{float: left;}
+
+
+
+
+.clear{content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; } /*fromatowanie po liście na strone "About"*/
+
+
+html, body {width:100%; padding:0; margin:0;} /*'default' body, bez odstępów*/
+body {font: 14px/25px Arial, Helvetica, sans-serif;font-family: 'Open Sans', sans-serif;background:#F6F8F7;padding:0 40px ;} /*format tekstu, rozmiar, czcionka, kolor tła, odstęp po 40 px (horizontaly)*/
+
+
+#container .wrap-container{background: #ffffff;padding: 20px;}/*formatowanie container-a, białe tło, odstęp 20 pixeli */
+
+.content-box .wrap-box {padding: 10px; position: relative;} /*box z odstępem 10 px od granicy elementu*/
+.content-box .header {margin-bottom: 20px;} /*class header-a, odstęp 20 px do kolejnego elementu z dołu*/
+.content-box .header h2{font-size: 35px; margin: 0; line-height: 45px;} /*formatowanie nagłówka h2: rozmiar, odstęp, rozmiar(wysota) wiersza*/
+
+.content-box.boxstyle-1{background:#fff; color: #333;} /*dla box-3; formatuje tło i tekst*/
+
+.portfolio-box {display: block;position: relative;margin: 0 auto;}/*element blokowy z pozycją względną, bez odstępów*/
+
+/*element blokowy, pozycja absolutowa, nie wincej niż 370px, tekst po centru, przezroczysty element \ czarne tło, przejście za .5s */
+.portfolio-box .portfolio-box-caption {display: block;position: absolute;bottom: 0;width: 100%;height: 100%;max-height:370px;max-width:370px;text-align: center;color: #fff;opacity: 0;background: rgba(0, 0, 0,.6);transition: all .5s;}
+
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {position: absolute;top: 50%;width: 100%;text-align: center;transform: translateY(-50%);}/*wyrównuje tekst na obrazach przy zmianie rozmiaru ekranu*/
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {padding: 0 15px;font-family: 'Open Sans'; font-size: 18px;} /*formatowanie napisu "ProjectName", odstęp 15px (horizontaly), rozmiar, czcionka Open Sans*/
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {text-transform: uppercase;font-size: 14px;font-weight: 600;}/*formatowanie napisu "category", duże litery, pogrubiony tekst*/
+
+.portfolio-box:hover .portfolio-box-caption {opacity: 1;} /*przy najedźie kursorem - transition 'box-cation'*/ 
+
+/*zmiana rozmiaru tekstu przy zmianie ekranu*/
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+
+.content-box.box-3 .post{text-align: center;margin: 20px; } /*wystawie tekst po centru w 3-im "box"*/
+
+
+
+article{display: inline-block;padding: 0 30px 30px;}/*odstęnpy tekstu left/right */
+article .art-header h3{font-size: 24px;margin-bottom: 10px;color: #222;}/*formatowanie nagłowka h3*/
+
+article .art-content blockquote {border-left: 3px solid #1c7791;font-size: 18px;margin: 0 50px;font-style: italic;color: #666;padding-left: 20px;} /*formatowanie cytatu*/
+article .art-content ol {float: left;text-align: justify;margin: 10px 50px;font-size: 16px;list-style-type: circle;}/*formatowanie listy*/
+
+/*formatuje nagłówek na stronie "About"*/
+article .entry-title {text-align: center;background: url(../images/banner.jpg) no-repeat center;min-height: 250px;padding-top: 100px;}/*tekst po centru, tło - jeden obrazek po centru, odstęp z góry 100 px*/
+article  h1.entry-title{line-height: 1.2;font-size: 40px;color: #fff;}/*tekst nagłówka "About"*/
+
+
+
+
+footer{text-align: center;}/*tekst footer-a wyrówniany no centru*/
+
+footer .wrap-footer{background: transparent;padding: 10px;position: relative;} /*prezroczyste tło, odstęp 10 px*/
+footer a{color:#666;} /*kolor linku*/
+footer p{margin-top: 20px;} /*odstęp od góry 20 px*/
+footer a:hover{text-decoration: underline;} /*podkreślia link przy najedźie kursorem*/
+footer ul li {display: inline-block;margin-right: 7px;} /*formatowanie linków "Privacy Policy" i "Terms of Use" (napisy na jednym wierszu)*/
+
+
+a.button{background-color: #F96380;border-radius: 35px; padding: 8px 15px;color: #fff;margin: 20px 0;border: 1px solid;} /*formatowanie przycisków "Learn more"*/
+a.button:hover{background-color: #fff;color: #222;border: 1px solid #ccc;} /*zmiana przyciska przy najedźie kursorem*/
+
+/*element dla zdjęć*/
+.item-container {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	background-color: #fff;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/*format zdjęć + przejście*/
+.item-container img {
+	display: block;
+	width: 100%;
+	height: auto;
+	-webkit-transition: all .5s ease; 
+    -moz-transition: all .5s ease; 
+    -ms-transition: all .5s ease; 
+    -o-transition: all .5s ease; 
+    transition: all .5s ease;
+}
+/*format nagłówków zdjęć*/
+.item-container .item-caption {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background: none;
+	width: 100%;
+	height: 100%;
+	padding: 35px 30px;
+	-webkit-transition: 0.6s;transition: 0.6s;
+	
+}
+/*wyświatlenie nagłówka przy najedźie kursorem*/
+.item-caption:hover{opacity: 0.9;}
+
+
+/*format nagłówka h3*/
+.item-container .item-caption h3{
+	font-size: 35px;
+	letter-spacing: 2px;
+	margin-bottom : 0;
+}
+
+/*box-3; powiększenie zdjęcia przy najedźie kursorem*/
+.item-container:hover img {
+	-webkit-transform:scale(1.25); 
+    -moz-transform:scale(1.25); 
+    -ms-transform:scale(1.25); 
+    -o-transform:scale(1.25);
+     transform:scale(1.25);
+}
+/*zmiana tła przy najedźie kursorem*/
+.item-container:hover .item-caption {
+	background: rgba(0, 0, 0, 0.5);
+}
